@@ -1,4 +1,4 @@
-import pytesseract
+# import pytesseract
 # import cv2
 
 # #ini buat convert dari jpg ke txt duls
