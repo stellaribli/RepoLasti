@@ -1,4 +1,4 @@
-def check():
+# def check():
 #     with open('tes1.txt') as f:
 #         datafile = f.readlines()
 #     found = False 
