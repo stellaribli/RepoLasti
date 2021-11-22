@@ -6,10 +6,10 @@ x=12
 @app.route('/index')
 def index():
     name = 'StelalCantik'
-    nilaicv = 12
+    nilai = 12
     textkeywords = 'Saran gue sich lo mending pake keyword a, b, c ye'
     textsaran = 'Iuh jelek CVnya'
-    return render_template('index.html', username=name, keywords = textkeywords, saran = textsaran, cvscore = nilaicv)
+    return render_template('index.html', username=name, keywords = textkeywords, saran = textsaran, cvscore = nilai)
 
 @app.route('/revisi/')
 def indexx():
