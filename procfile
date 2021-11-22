@@ -1,2 +1,0 @@
-web: python lasttxt.py
-worker: python lasttxt.py 
