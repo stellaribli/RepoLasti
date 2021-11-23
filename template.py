@@ -920,4 +920,4 @@ def fin():
     
     return render_template('index.html', role = peran, username=name, keywords = textkeywords, saran = textsaran, cvscore = nilai)
 
-# app.run(host='0.0.0.0', port=80)
+app.run(host='0.0.0.0', port=80)
