@@ -31,7 +31,7 @@
 </head>
 
 <body class="u-body">
-  <section class="u-clearfix u-section-1" id="sec-38f5">
+  <section class="u-clearfix u-section-1">
     <div class="u-clearfix u-gutter-0 u-layout-wrap u-layout-wrap-1">
       <div class="u-gutter-0 u-layout">
         <div class="u-layout-col">
@@ -40,22 +40,27 @@
               <h1 class="u-custom-font u-text u-text-default u-text-1">Upload CV Kamu</h1>
             </div>
           </div>
-          <div class="u-container-style u-layout-cell u-size-30 u-layout-cell-2">
+          <div class="u-container-style u-size-30 u-layout-cell-2">
             <div class="u-container-layout u-container-layout-2">
-              <div class="u-custom-color-4 u-expanded-width u-shape u-shape-rectangle u-shape-1"></div>
-              <a 
-                class=" u-border-2 u-border-black u-btn u-btn-round u-button-style u-hover-custom-color-1 u-radius-50
-                u-text-black u-text-hover-white u-white u-btn-1"><span class="u-icon u-icon-1"><svg
-                    class="u-svg-content" viewBox="0 0 24 24" style="width: 1em; height: 1em;">
-                    <path class="heroicon-ui"
+              <div class="u-custom-color-4 u-expanded-widths u-shape-1"></div>
+              <form action="" enctype="multipart/form-data" method="post">
+                <input id='submit-button' type="submit" name="submit" value="Upload CV" style='display:none;'>
+                <input id="file-upload" accept=".jpg" type="file" name="file" value='PILIH FILE' style='display:none;'>
+              </form>
+              <label for="file-upload" class=" u-border-2 u-border-black u-btn u-btn-round u-button-style u-hover-custom-color-1 u-radius-50
+                u-text-black u-text-hover-white u-white u-btn-1" style='border-width:2px;border-color:black;'><span
+                  class="u-icon u-icon-1"><svg class="u-svg-content" viewBox="0 0 24 24">
+                    <path
                       d="M13 5.41V17a1 1 0 0 1-2 0V5.41l-3.3 3.3a1 1 0 0 1-1.4-1.42l5-5a1 1 0 0 1 1.4 0l5 5a1 1 0 1 1-1.4 1.42L13 5.4zM3 17a1 1 0 0 1 2 0v3h14v-3a1 1 0 0 1 2 0v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-3z">
                     </path>
-                  </svg><img></span>&nbsp; pilih file
-              </a>
-              <a href="{{ route }}"
-                class="u-border-2 u-border-hover-black u-btn u-btn-round u-button-style u-custom-color-1 u-hover-white u-radius-50 u-text-body-alt-color u-text-hover-custom-color-1 u-btn-2">SUBMIT
-                FILE</a>
-              <h2 class="u-align-center u-custom-font u-text u-text-2">P​astikan kamu mengunggah file dengan format JPG
+                  </svg><img></span>&nbsp; Pilih File
+              </label>
+              <label for='submit-button' class=" u-border-2 u-border-hover-black u-btn u-btn-round u-button-style u-custom-color-1 u-hover-white
+                u-radius-50 u-text-body-alt-color u-text-hover-custom-color-1 u-btn-2">
+                SUBMIT
+                FILE</label>
+              <h2 class="u-align-center u-custom-font u-text-2">P​astikan kamu mengunggah file dengan format
+                JPG
                 dengan nama file CV.jpg</h2>
             </div>
           </div>
@@ -66,22 +71,11 @@
 
 
   <footer class="u-align-center u-clearfix u-footer u-grey-80 u-footer" id="sec-8c0f">
-    <div class="u-clearfix u-sheet u-valign-middle u-sheet-1">
+    <div>
       <p class="u-small-text u-text u-text-variant u-text-1"> © 2021 Aksel ATS Checker - Tugas Besar Layanan Sistem dan
         Teknologi Informasi Kelompok 5</p>
     </div>
   </footer>
-  <section class="u-backlink u-clearfix u-grey-80">
-    <a class="u-link" href="https://nicepage.com/html-templates" target="_blank">
-      <span>HTML Template</span>
-    </a>
-    <p class="u-text">
-      <span>created with</span>
-    </p>
-    <a class="u-link" href="https://nicepage.site" target="_blank">
-      <span>Best Free Website Builder</span>
-    </a>.
-  </section>
 </body>
 
 </html>
