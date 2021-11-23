@@ -44,8 +44,10 @@
             <div class="u-container-layout u-container-layout-2">
               <div class="u-custom-color-4 u-expanded-widths u-shape-1"></div>
               <form action="" enctype="multipart/form-data" method="post">
-                <input id='submit-button' type="submit" name="submit" value="Upload CV" style='display:none;'>
-                <input id="file-upload" accept=".jpg" type="file" name="file" value='PILIH FILE' style='display:none;'>
+                <input oninput="success()" id='submit-button' type="submit" name="submit" value="Upload CV"
+                  style='display:none;'>
+                <input oninput="success()" id="file-upload" accept=".jpg" type="file" name="file" value='PILIH FILE'
+                  style='display:none;'>
               </form>
               <label for="file-upload" class=" u-border-2 u-border-black u-btn u-btn-round u-button-style u-hover-custom-color-1 u-radius-50
                 u-text-black u-text-hover-white u-white u-btn-1" style='border-width:2px;border-color:black;'><span
@@ -76,6 +78,12 @@
         Teknologi Informasi Kelompok 5</p>
     </div>
   </footer>
+  <script>
+    function success() {
+      alert("File berhasil diupload!");
+    }
+  </script>
+
 </body>
 
 </html>
