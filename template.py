@@ -72,7 +72,6 @@ def fin():
     return render_template('index.html', username=name, keywords = textkeywords, saran = textsaran, cvscore = nilai)
 
 
-
 @app.route('/Designer')
 def des():
     name = 'Calon Designer apalah'
@@ -91,9 +90,6 @@ def des():
         textsaran = textsaran + ' ' + (arrayksaran[i])
 
     return render_template('index.html', username=name, keywords = textkeywords, saran = textsaran, cvscore = nilai)
-
-
-
 
 namafilecv = ""
 @app.route('/upload', methods=['GET', 'POST'])
