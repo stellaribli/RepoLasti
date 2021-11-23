@@ -1,18 +1,18 @@
-# import pytesseract
-# import cv2
+import pytesseract
+import cv2
 
 # #ini buat convert dari jpg ke txt duls
-# pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+# pytesseract.pytesseract.tesseract_cmd = r'/Library/Frameworks/Python.framework/Versions/3.6/lib/python3.6/site-packages'
 
-# img = cv2.imread('test.jpg')
+img = cv2.imread('test.jpg')
 
-# txt = pytesseract.image_to_string(img)
+txt = pytesseract.image_to_string(img)
 
-file = open('tes1.txt', 'w')
+# file = open('tes1.txt', 'w')
 # file.write(txt)
-file.close()
+# file.close()
 
-#programnya
+# #programnya
 
 #variabel awal
 nilai = 100
