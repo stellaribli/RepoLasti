@@ -26,13 +26,14 @@ def pilih():
 cvPM = ""
 @app.route('/uploadPM', methods=['GET', 'POST'])
 def uploadPM():
+    rute = '/PM'
     if request.method == 'POST':
         uploaded_file = request.files['file']
         if uploaded_file.filename != '':
             uploaded_file.save(uploaded_file.filename)
         cvPM = uploaded_file.filename
         return redirect(url_for('pm'))
-    return render_template('upload.html')
+    return render_template('upload.html', route = rute)
 
 @app.route('/PM')
 def pm():
@@ -241,7 +242,7 @@ def pm():
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
     
-    return render_template('index.html', keywords = textkeywords, saran = textsaran, cvscore = nilai)
+    return render_template('index.html', keywords = textkeywords, saran = textsaran, cvscore = nilai, route = rute)
 
  ##############PAGE SOFTENG#############################
  ##################################################
@@ -465,7 +466,7 @@ def se():
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
     
-    return render_template('index.html', keywords = textkeywords, saran = textsaran, cvscore = nilai)
+    return render_template('index.html', keywords = textkeywords, saran = textsaran, cvscore = nilai, route = rute)
 
  ##############PAGE GRAPHIC DESIGN#################
  ##################################################
@@ -473,13 +474,14 @@ def se():
 cvGD = ""
 @app.route('/uploadGD', methods=['GET', 'POST'])
 def uploadGD():
+    rute = '/GD'
     if request.method == 'POST':
         uploaded_file = request.files['file']
         if uploaded_file.filename != '':
             uploaded_file.save(uploaded_file.filename)
         cvGD = uploaded_file.filename
         return redirect(url_for('gd'))
-    return render_template('upload.html')
+    return render_template('upload.html', route = rute)
 
 @app.route('/GD')
 def gd():
@@ -696,13 +698,14 @@ def gd():
 cvF = ""
 @app.route('/uploadF', methods=['GET', 'POST'])
 def uploadF():
+    rute = '/Finance'
     if request.method == 'POST':
         uploaded_file = request.files['file']
         if uploaded_file.filename != '':
             uploaded_file.save(uploaded_file.filename)
         cvF = uploaded_file.filename
         return redirect(url_for('fin'))
-    return render_template('upload.html')
+    return render_template('upload.html', route = rute)
 
 @app.route('/Finance')
 def fin():
