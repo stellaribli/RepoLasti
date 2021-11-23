@@ -11,13 +11,13 @@ def index():
     textsaran = 'Iuh jelek CVnya'
     return render_template('index.html', username=name, keywords = textkeywords, saran = textsaran, cvscore = nilai)
 
-@app.route('/revisi/')
-def indexx():
-    name = 'StelalCantik'
-    nilaicv = 12
-    textkeywords = 'Sekarang lo jelek'
-    textsaran = 'Iuh jelek CVnya'
-    return render_template('index.html', username=name, keywords = textkeywords, saran = textsaran, cvscore = nilaicv)
+# @app.route('/revisi/')
+# def indexx():
+#     name = 'StelalCantik'
+#     nilaicv = 12
+#     textkeywords = 'Sekarang lo jelek'
+#     textsaran = 'Iuh jelek CVnya'
+#     return render_template('index.html', username=name, keywords = textkeywords, saran = textsaran, cvscore = nilaicv)
 
 
 
