@@ -2,6 +2,7 @@ from flask import Flask, render_template, request, request, redirect, url_for
 from werkzeug.utils import secure_filename 
 import os
 
+
 app = Flask(__name__)
 x=12
 @app.route('/')
