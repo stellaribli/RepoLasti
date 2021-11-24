@@ -9,7 +9,6 @@ app = Flask(__name__)
 @app.route('/')
 def pilihawal():
     return render_template('pilih.html')
-
 def create_app():
    return app
 
