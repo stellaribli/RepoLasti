@@ -4,7 +4,7 @@ import os
 import pytesseract
 import cv2
 from waitress import serve
-from tesseract import image_to_string
+
 pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
 
 
