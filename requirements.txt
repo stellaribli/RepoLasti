@@ -4,3 +4,4 @@ pytesseract==0.3.8
 Werkzeug==2.0.2
 # gunicorn
 Pillow==8.4.0
+

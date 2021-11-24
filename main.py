@@ -3,14 +3,15 @@ from werkzeug.utils import secure_filename
 import os
 import pytesseract
 import cv2
+from waitress import serve
 pytesseract.pytesseract.tesseract_cmd = r'/usr/local/Cellar/tesseract/4.1.3/bin/tesseract'
-ON_HEROKU = os.environ.get('ON_HEROKU')
-
-if ON_HEROKU:
-    # get the heroku port
-    port = int(os.environ.get('PORT', 17995))  # as per OP comments default is 17995
-else:
-    port = 3000
+# ON_HEROKU = os.environ.get('ON_HEROKU')
+# heroku=''
+# if ON_HEROKU:
+#     # get the heroku port
+#     port = int(os.environ.get('PORT', 17995))  # as per OP comments default is 17995
+# else:
+#     port = 3000
 
 def create_app():
     return app
@@ -934,5 +935,4 @@ def fin():
     return render_template('index.html', role = peran, username=name, keywords = textkeywords, saran = textsaran, cvscore = nilai)
 
 if __name__ == "__main__":
-    from waitress import serve
-    serve(app, host="0.0.0.0", port=port)
+    serve(app)
