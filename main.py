@@ -4,7 +4,7 @@ import os
 import pytesseract
 import cv2
 from waitress import serve
-pytesseract.pytesseract.tesseract_cmd = r'/usr/local/Cellar/tesseract/4.1.3/bin/tesseract'
+pytesseract.pytesseract.tesseract_cmd = r'/usr/bin/tesseract'
 # ON_HEROKU = os.environ.get('ON_HEROKU')
 # heroku=''
 # if ON_HEROKU:
