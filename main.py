@@ -935,4 +935,4 @@ def fin():
     return render_template('index.html', role = peran, username=name, keywords = textkeywords, saran = textsaran, cvscore = nilai)
 
 if __name__ == "__main__":
-    serve(app)
+    app.run()
