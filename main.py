@@ -5,7 +5,7 @@ import pytesseract
 import cv2
 from waitress import serve
 
-pytesseract.pytesseract.tesseract_cmd
+pytesseract.pytesseract.tesseract_cmd = '.apt/usr/bin/tesseract'
 #error disini
 
 
