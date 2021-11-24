@@ -7,7 +7,6 @@ from waitress import serve
 
 pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
 
-
 def create_app():
     return app
 
