@@ -4,6 +4,16 @@ import os
 import pytesseract
 import cv2
 pytesseract.pytesseract.tesseract_cmd = r'/usr/local/Cellar/tesseract/4.1.3/bin/tesseract'
+ON_HEROKU = os.environ.get('ON_HEROKU')
+
+if ON_HEROKU:
+    # get the heroku port
+    port = int(os.environ.get('PORT', 17995))  # as per OP comments default is 17995
+else:
+    port = 3000
+
+def create_app():
+    return app
 
 app = Flask(__name__)
 @app.route('/')
@@ -20,8 +30,8 @@ def pilih():
     os.remove("CV.jpg") 
     return render_template('pilih.html')
 
-def create_app():
-    return app
+
+
 
  ##############PAGE PM#############################
  ##################################################
@@ -925,4 +935,4 @@ def fin():
 
 if __name__ == "__main__":
     from waitress import serve
-    serve(app, host="0.0.0.0", port=8080)
+    serve(app, host="0.0.0.0", port=port)
