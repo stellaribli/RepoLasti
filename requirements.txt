@@ -4,4 +4,3 @@ waitress==2.0.0
 Werkzeug==2.0.2
 gunicorn
 opencv-python-headless
-tesseract 
