@@ -6,7 +6,6 @@ import cv2
 from waitress import serve
 
 pytesseract.pytesseract.tesseract_cmd = '/app/.apt/usr/bin/tesseract'
-#error disini
 
 
 def create_app():
