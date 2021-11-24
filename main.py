@@ -9,6 +9,8 @@ app = Flask(__name__)
 @app.route('/')
 def pilihawal():
     return render_template('pilih.html')
+def create_app():
+   return app
 
  ##############PAGE PILIH ROLE#####################
  ##################################################
@@ -928,4 +930,6 @@ def fin():
     
     return render_template('index.html', role = peran, username=name, keywords = textkeywords, saran = textsaran, cvscore = nilai)
 
-app.run(host='0.0.0.0', port=80)
+if __name__ == "__main__":
+    from waitress import serve
+    serve(app, host="0.0.0.0", port=8080)
