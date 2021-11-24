@@ -1,6 +1,6 @@
 Flask==2.0.2
-opencv_python==4.5.1.48
 pytesseract==0.3.7
 waitress==2.0.0
 Werkzeug==2.0.2
 gunicorn
+opencv-python-headless
