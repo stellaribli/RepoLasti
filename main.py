@@ -268,7 +268,6 @@ def pm():
 
     if check12():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
@@ -517,7 +516,6 @@ def se():
 
     if check12():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
@@ -766,7 +764,6 @@ def gd():
 
     if check12():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
@@ -1015,7 +1012,6 @@ def fin():
 
     if check12():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
