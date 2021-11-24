@@ -3,14 +3,12 @@ from werkzeug.utils import secure_filename
 import os
 import pytesseract
 import cv2
-pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files\Tesseract-OCR\tesseract.exe'
+pytesseract.pytesseract.tesseract_cmd = r'/usr/local/Cellar/tesseract/4.1.3/bin/tesseract'
 
 app = Flask(__name__)
 @app.route('/')
 def pilihawal():
     return render_template('pilih.html')
-def create_app():
-   return app
 
  ##############PAGE PILIH ROLE#####################
  ##################################################
@@ -42,7 +40,7 @@ def pm():
     name = 'Akselzen'
     nilai = 25
     textkeywords = "Berikut keyword yang bisa kamu pakai!\n"
-    textsaran = " "
+    textsaran = ""
 
     #####CONVERT
     img = cv2.imread('CV.jpg')
@@ -52,7 +50,7 @@ def pm():
     file.write(txt)
     file.close()
 
-    #BASEDONROLES1 [10%]
+    #BASEDONROLES1 [5%]
     def check():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -63,12 +61,12 @@ def pm():
         return False 
 
     if check():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Administered-\n'
 
-    #BASEDONROLES2 [10%]
+    #BASEDONROLES2 [5%]
     def check2():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -79,12 +77,12 @@ def pm():
         return False 
 
     if check2():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Managed-\n'
 
-    #BASEDONROLES3 [10%]
+    #BASEDONROLES3 [5%]
     def check3():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -95,12 +93,12 @@ def pm():
         return False 
 
     if check3():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Produced-\n'
 
-    #BASEDONROLES4 [10%]
+    #BASEDONROLES4 [5%]
     def check4():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -111,12 +109,12 @@ def pm():
         return False 
 
     if check4():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Organized-\n'
 
-    #BASEDONROLES5 [10%]
+    #BASEDONROLES5 [5%]
     def check5():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -127,12 +125,12 @@ def pm():
         return False 
 
     if check5():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Executed-\n'
 
-    #BASEDONROLES6 [10%]
+    #BASEDONROLES6 [5%]
     def check6():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -143,12 +141,12 @@ def pm():
         return False 
 
     if check6():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Prioritized-\n'
 
-    #BASEDONROLES7 [10%]
+    #BASEDONROLES7 [5%]
     def check7():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -159,12 +157,12 @@ def pm():
         return False 
 
     if check7():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Supervised-\n'
 
-    #BASEDONROLES8 [10%]
+    #BASEDONROLES8 [5%]
     def check8():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -175,12 +173,12 @@ def pm():
         return False 
 
     if check8():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Reviewed-\n'
 
-    #BASEDONROLES9 [10%]
+    #BASEDONROLES9 [5%]
     def check9():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -191,13 +189,13 @@ def pm():
         return False 
 
     if check9():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Product Manager-\n'
 
 
-    #BASEDONROLES10 [10%]
+    #BASEDONROLES10 [5%]
     def check10():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -208,7 +206,7 @@ def pm():
         return False 
 
     if check10():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Product-\n'
@@ -225,7 +223,6 @@ def pm():
 
     if check11():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan akun linkedin. '
@@ -242,7 +239,6 @@ def pm():
 
     if check12():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
@@ -279,7 +275,7 @@ def se():
     file.write(txt)
     file.close()
 
-    #BASEDONROLES1 [10%]
+    #BASEDONROLES1 [5%]
     def check():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -290,12 +286,12 @@ def se():
         return False 
 
     if check():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Software Engineer-\n'
 
-    #BASEDONROLES2 [10%]
+    #BASEDONROLES2 [5%]
     def check2():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -306,12 +302,12 @@ def se():
         return False 
 
     if check2():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Installed-\n'
 
-    #BASEDONROLES3 [10%]
+    #BASEDONROLES3 [5%]
     def check3():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -322,12 +318,12 @@ def se():
         return False 
 
     if check3():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Debugged-\n'
 
-    #BASEDONROLES4 [10%]
+    #BASEDONROLES4 [5%]
     def check4():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -338,12 +334,12 @@ def se():
         return False 
 
     if check4():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Predicted-\n'
 
-    #BASEDONROLES5 [10%]
+    #BASEDONROLES5 [5%]
     def check5():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -354,12 +350,12 @@ def se():
         return False 
 
     if check5():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Deployed-\n'
 
-    #BASEDONROLES6 [10%]
+    #BASEDONROLES6 [5%]
     def check6():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -370,12 +366,12 @@ def se():
         return False 
 
     if check6():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Automated-\n'
 
-    #BASEDONROLES7 [10%]
+    #BASEDONROLES7 [5%]
     def check7():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -386,12 +382,12 @@ def se():
         return False 
 
     if check7():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Troubleshooted-\n'
 
-    #BASEDONROLES8 [10%]
+    #BASEDONROLES8 [5%]
     def check8():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -402,12 +398,12 @@ def se():
         return False 
 
     if check8():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Conceptualized-\n'
 
-    #BASEDONROLES9 [10%]
+    #BASEDONROLES9 [5%]
     def check9():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -418,13 +414,13 @@ def se():
         return False 
 
     if check9():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Tested-\n'
 
 
-    #BASEDONROLES10 [10%]
+    #BASEDONROLES10 [5%]
     def check10():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -435,7 +431,7 @@ def se():
         return False 
 
     if check10():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Assembled-\n'
@@ -452,7 +448,6 @@ def se():
 
     if check11():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan akun linkedin. '
@@ -469,7 +464,6 @@ def se():
 
     if check12():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
@@ -506,7 +500,7 @@ def gd():
     file.write(txt)
     file.close()
 
-    #BASEDONROLES1 [10%]
+    #BASEDONROLES1 [5%]
     def check():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -517,12 +511,12 @@ def gd():
         return False 
 
     if check():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Graphic Designer-\n'
 
-    #BASEDONROLES2 [10%]
+    #BASEDONROLES2 [5%]
     def check2():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -533,12 +527,12 @@ def gd():
         return False 
 
     if check2():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Conceptualized-\n'
 
-    #BASEDONROLES3 [10%]
+    #BASEDONROLES3 [5%]
     def check3():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -549,12 +543,12 @@ def gd():
         return False 
 
     if check3():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Illustrated-\n'
 
-    #BASEDONROLES4 [10%]
+    #BASEDONROLES4 [5%]
     def check4():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -565,12 +559,12 @@ def gd():
         return False 
 
     if check4():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Designed-\n'
 
-    #BASEDONROLES5 [10%]
+    #BASEDONROLES5 [5%]
     def check5():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -581,12 +575,12 @@ def gd():
         return False 
 
     if check5():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Proved-\n'
 
-    #BASEDONROLES6 [10%]
+    #BASEDONROLES6 [5%]
     def check6():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -597,12 +591,12 @@ def gd():
         return False 
 
     if check6():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Redesigned-\n'
 
-    #BASEDONROLES7 [10%]
+    #BASEDONROLES7 [5%]
     def check7():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -613,12 +607,12 @@ def gd():
         return False 
 
     if check7():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Established-\n'
 
-    #BASEDONROLES8 [10%]
+    #BASEDONROLES8 [5%]
     def check8():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -629,12 +623,12 @@ def gd():
         return False 
 
     if check8():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Planned-\n'
 
-    #BASEDONROLES9 [10%]
+    #BASEDONROLES9 [5%]
     def check9():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -645,13 +639,13 @@ def gd():
         return False 
 
     if check9():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Validated-\n'
 
 
-    #BASEDONROLES10 [10%]
+    #BASEDONROLES10 [5%]
     def check10():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -662,7 +656,7 @@ def gd():
         return False 
 
     if check10():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Tabulated-\n'
@@ -679,7 +673,6 @@ def gd():
 
     if check11():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan akun linkedin. '
@@ -696,7 +689,6 @@ def gd():
 
     if check12():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
@@ -733,7 +725,7 @@ def fin():
     file.write(txt)
     file.close()
 
-    #BASEDONROLES1 [10%]
+    #BASEDONROLES1 [5%]
     def check():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -744,12 +736,12 @@ def fin():
         return False 
 
     if check():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Finance-\n'
 
-    #BASEDONROLES2 [10%]
+    #BASEDONROLES2 [5%]
     def check2():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -760,12 +752,12 @@ def fin():
         return False 
 
     if check2():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Administered-\n'
 
-    #BASEDONROLES3 [10%]
+    #BASEDONROLES3 [5%]
     def check3():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -776,12 +768,12 @@ def fin():
         return False 
 
     if check3():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Calculated-\n'
 
-    #BASEDONROLES4 [10%]
+    #BASEDONROLES4 [5%]
     def check4():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -792,12 +784,12 @@ def fin():
         return False 
 
     if check4():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Audited-\n'
 
-    #BASEDONROLES5 [10%]
+    #BASEDONROLES5 [5%]
     def check5():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -808,12 +800,12 @@ def fin():
         return False 
 
     if check5():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Projected-\n'
 
-    #BASEDONROLES6 [10%]
+    #BASEDONROLES6 [5%]
     def check6():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -824,12 +816,12 @@ def fin():
         return False 
 
     if check6():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Budgeted-\n'
 
-    #BASEDONROLES7 [10%]
+    #BASEDONROLES7 [5%]
     def check7():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -840,12 +832,12 @@ def fin():
         return False 
 
     if check7():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Balanced-\n'
 
-    #BASEDONROLES8 [10%]
+    #BASEDONROLES8 [5%]
     def check8():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -856,12 +848,12 @@ def fin():
         return False 
 
     if check8():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Allocated-\n'
 
-    #BASEDONROLES9 [10%]
+    #BASEDONROLES9 [5%]
     def check9():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -872,13 +864,13 @@ def fin():
         return False 
 
     if check9():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Developed-\n'
 
 
-    #BASEDONROLES10 [10%]
+    #BASEDONROLES10 [5%]
     def check10():
         with open('CV.txt') as f:
             datafile = f.readlines()
@@ -889,7 +881,7 @@ def fin():
         return False 
 
     if check10():
-        nilai += 10
+        nilai += 5
     else:
         nilai == nilai
         textkeywords += '-Managed-\n'
@@ -906,7 +898,6 @@ def fin():
 
     if check11():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan akun linkedin. '
@@ -923,7 +914,6 @@ def fin():
 
     if check12():
         nilai == nilai
-        textsaran += 'Perbanyak penggunaan keyword yap!'
     else:
         nilai -= 10
         textsaran += 'Sertakan nomor telepon kamu.'
