@@ -1,3 +1,11 @@
+@viewport {
+  width: device-width;
+    zoom: 1;
+    min-zoom: 0.5;
+    max-zoom: 3;
+    user-zoom: fixed;
+}
+
 /*begin-commonstyles library*//*!
  * froala_editor v4.0.6 (https://www.froala.com/wysiwyg-editor)
  * License https://froala.com/wysiwyg-editor/terms/
