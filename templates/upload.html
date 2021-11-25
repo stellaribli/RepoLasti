@@ -44,8 +44,7 @@
             <div class="u-container-layout u-container-layout-2">
               <div class="u-custom-color-4 u-expanded-widths u-shape-1"></div>
               <form action="" enctype="multipart/form-data" method="post">
-                <input oninput="success()" id='submit-button' type="submit" name="submit" value="Upload CV"
-                  style='display:none;'>
+                <input id='submit-button' type="submit" name="submit" value="Upload CV" style='display:none;'>
                 <input oninput="success()" id="file-upload" accept=".jpg" type="file" name="file" value='PILIH FILE'
                   style='display:none;'>
               </form>
@@ -79,9 +78,20 @@
     </div>
   </footer>
   <script>
+    // function success() {
+    //   alert("File berhasil diupload!");
+    // }
     function success() {
-      alert("File berhasil diupload!");
-    }
+      var name = document.getElementById('file-upload');
+      if (name == 'CV.jpg') {
+        alert('Berhasil upload file CV.jpg');
+      }
+      else {
+        alert('Upload File tidak sesuai format CV.jpg!');
+      }
+    };
+
+
   </script>
 
 </body>
